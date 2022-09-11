@@ -10,6 +10,11 @@
         align-items: center;
     }
 
+    &--slider{
+        width: 100%;
+        // height: 100vh;
+    }
+
     &__featured{
         padding: 0;
         background-color: var(--primary-theme-color);
@@ -200,6 +205,10 @@
 @media(min-width: 850px){
 
     .section{
+
+        &--slider{
+            height: 100vh;
+        }
         &__featured{
             padding: 4rem 0;
 

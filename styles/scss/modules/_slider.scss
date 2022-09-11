@@ -1,4 +1,6 @@
 .slider{
+    width: 100%;
+    height: 100%;
 
     &__title {
         font-style: normal;
@@ -61,6 +63,15 @@
             }
         }
     }
+    
+    &-hero{
+        &-prev{
+            color: var(--tertiary-theme-color) !important;
+        }
+        &-next{
+            color: var(--tertiary-theme-color) !important;
+        }
+    }
 }
 
 .arrow{
@@ -90,6 +101,10 @@
     &--disabled{
         display: none;
     }
+}
+
+.swiper-pagination-bullet{
+    background-color: var(--tertiary-theme-color) !important;
 }
 
 @media (max-width: 940px) {
