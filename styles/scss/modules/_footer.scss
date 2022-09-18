@@ -1,24 +1,77 @@
 .footer {
     box-sizing: border-box;
     text-align: center;
+    background-color: #0D0E12;
+            justify-content: center;
+
+
 
     &__row {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #0D0E12;
-        color: var(--secondary-text-color);
-        font-family: var(--primary-font-family);
-        max-width: 100%;
-        padding-bottom: 1.5rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap:50px;
+        padding: 45px 0px;
+    }
 
-        &-1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    &__section {
+        width: 100%;
+        height: 100%;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+
     }
     
+    
+    &__title {
+        top: 0;
+        color: white;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125rem;
+        margin: 0;
+        padding-bottom: 1rem;
+        text-align: left;
+
+    }
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+    }
+
+    &__img {
+        width: 200px;
+        padding-top: 3rem;
+        cursor: pointer;
+    }
+    &__list {
+        padding: 0;
+        text-align: left;
+        gap: 0.25rem;
+        list-style: none;
+    }
+    
+    &__paragraph {
+        text-decoration: none;
+        color: white;
+        &_1 {
+            color: white;
+            text-align: left;
+        }
+        &:hover {
+            color: var(--tertiary-theme-color);
+        }
+    }
+
     &__sub {
         background-color: var(--tertiary-theme-color);
         font-style: normal;
@@ -41,121 +94,23 @@
 
         }
     }    
-
-    &__column {
-        float: left;
-        color: var(--primary-text-color);
-    }
-    
-    &__link-icon {
-        transition: all 0.25s;
-        font-size: 1.5rem;
+    &__icon-bi {
         color: white;
 
-
         &:hover {
-            cursor: pointer;
-            color: var(--tertiary-theme-color);
-            background-color: white;
-            border-radius: 1rem;
-        }
-    }
-    
-    &__button-text {
-            padding: 1rem;
-            border-radius: 4px;
-            font-weight: 500;
-            background: var(--tertiary-theme-color);
-            color: white;
-            font-size: 1.25rem;
-            border: 1px solid var(--tertiary-theme-color);
-    
-            &:hover {
-                background: white;
-                color: var(--tertiary-theme-color);
-                border: 1px solid white
-            }
-        }
-
-
-    &__title {
-        top: 0;
-        
-        color: white;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        text-align: left;
-
-    }
-
-
-    &__paragraph {
-        color: rgb(148, 148, 148);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        text-align: left;
-        list-style: none;
-        text-decoration: none;
-        left: 0px;
-        
-        &:hover {
-            color: var(--tertiary-theme-color);
+            color: black;
         }
     }
 
-    &__paragraph-1 {
-        color: rgb(148, 148, 148);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        text-align: center;
-        list-style: none;
-        text-decoration: none;
-        left: 0px;
-    }
-
-    &__subtitle {
-        text-align: center;
-        color: var(--tertiary-text-color);
-        font-family: var(--primary-font-family);
-        align-items: center;
-        font-size: 1rem;
-
-        &-link {
-            color: var(--primary-highlight-color);
-            text-decoration: none;
-            transition: all 0.25s;
-
-            &:hover {
-                color: var(--primary-text-color);
-            }
-        }
-    }
 }
 
-@media(min-width: 768px){
+@media(max-width: 768px){
     .footer{
         &__row{
-            flex-direction: row;
-        }
-
-        .footer__column{
-            &-left {
-                width: 340px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            &-middle {
-                width: 340px;
-            }
-            
-            &-right {
-                width: 340px;
-            }
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap:30px;
+            padding: 35px 0px;
         }
 
         
